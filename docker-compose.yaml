@@ -1,0 +1,17 @@
+version: "3"
+services:
+    db:
+        image: postgres:14
+        restart: always
+        network_mode: host
+        environment:
+            - POSTGRES_PASSWORD=${DB_PASS}
+            - POSTGRES_DB=test
+    pgadmin:
+        image: dpage/pgadmin4
+        restart: always
+        network_mode: host
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=${PGA_EMAIL}
+            - PGADMIN_DEFAULT_PASSWORD=${PGA_PASS}
+            - PGADMIN_LISTEN_PORT=${PGA_PORT}

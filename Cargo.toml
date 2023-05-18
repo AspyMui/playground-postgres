@@ -1,0 +1,11 @@
+[package]
+name = "playground-postgres"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenvy = "0.15.7"
+postgres = "0.19.5"
+postgres-types = {version="0.2.5", features = ["derive"]}
